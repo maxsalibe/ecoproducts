@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
 import Carrito from '../views/Carrito.vue'
 import Productos from '../views/Productos.vue'
+import CargarUserForm from '../views/CargarUserForm.vue'
 
 
 const router = createRouter({
@@ -11,27 +11,37 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'homeUsuario',
+      component: HomeUsuario
     },
     {
-      path: '/',
-      name: 'Login',
+      path: '/homeAdmin',
+      name: 'homeAdmin',
+      component: HomeAdmin
+    },
+    {
+      path: '/login',
+      name: 'login',
       component: Login
     },
     {
-      path: '/',
-      name: 'Logout',
+      path: '/signup',
+      name: 'signup',
+      component: CargarUserForm
+    },
+    {
+      path: '/logout',
+      name: 'logout',
       component: Logout
     },
     {
-      path: '/',
-      name: 'Carrito',
+      path: '/carrito',
+      name: 'carrito',
       component: Carrito
     },
     {
-      path: '/',
-      name: 'Productos',
+      path: '/productos',
+      name: 'productos',
       component: Productos
     },
 

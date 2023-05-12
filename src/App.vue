@@ -1,36 +1,26 @@
-<script setup>
+<script>
 import { RouterLink, RouterView } from 'vue-router'
-
+import {router} from './router/index'
+import Navbar from './components/Navbar.vue'
 import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap'
+
+// tira error en el export
+export default {
+   name: 'App',
+  components: {
+    Navbar
+  }
+}
 </script>
 
 <template>
+<div>
+  
+<Navbar />
 
-<!-- Ezequiel -->
+  <h3>Hola desde App.vue</h3>
 
-<nav class=" navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Carrito</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
- 
+</div>
 </template>
 
 <style scoped>
