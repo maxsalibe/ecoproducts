@@ -1,13 +1,33 @@
 <template>
 
-
+<!-- Lucia -->
+<div>
+    <a>prueba prueba prueba</a>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <p>kjlasdklasdkjlas</p>
+</div>
 
 </template>
-<!-- Lucia -->
 
 <script>
 export default {
-
+ name:'HomeUsuario',
 }
 </script>
 

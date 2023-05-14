@@ -2,14 +2,14 @@
   
   <nav class=" navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <router-link class="navbar-brand" to="/">Eco-Products</router-link>
+    <router-link class="navbar-brand" to="/productos">Eco-Products</router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link class="nav-link active" aria-current="page" to="/">Home</router-link>
+          <router-link class="nav-link active" aria-current="page" to="/HomeUsuario">Home</router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/carrito">Carrito</router-link>
@@ -23,7 +23,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><router-link class="dropdown-item" to="/login">Login</router-link></li>
-            <li><router-link class="dropdown-item" to="signup">Sign up</router-link></li>
+            <li><router-link class="dropdown-item" to="/signup">Sign up</router-link></li>
           </ul>
         </li>
       </ul>
@@ -34,15 +34,13 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue';
 
-  components: {
-    Navbar
-  },
-
-}
+export default defineComponent({
+   name:'Navbar'
+});
 </script>
 
-<style>
+<style scoped>
 
 </style>
