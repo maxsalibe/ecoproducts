@@ -2,7 +2,7 @@
 
     <section id="hero" class="hero d-flex align-items-center section-bg">
     <div class="container">
-      <div class="row justify-content-between gy-5">
+      <div class="row gy-5">
         <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
           <h2>Compra nuestros mejores productos <b>Eco-Friendly</b></h2>
           <p>Bienvenid@ a nuestra tiene online
@@ -11,7 +11,7 @@
           </div>
         </div>
         <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
-            <img src="@/assets/bannerHomeUsuario.jpg" height="500">
+            <img src="@/assets/bannerHomeUsuario.jpg" height="400">
         </div>
       </div>
     </div>
@@ -61,13 +61,13 @@
               <h3>Starters</h3>
             </div> -->
 
-            <div class="row gy-5">
+            <div class="row">
 
-              <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="assets/img/menu/menu-item-1.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Magnam Tiste</h4>
+              <div class="col-lg-4">
+                <a href="../assets/img/menu/menu-item-1.jpeg" class="glightbox"><img src="../assets/img/menu/menu-item-1.jpeg" class="menu-img img-fluid" alt=""></a>
+                <h4>Bamboo Cotton</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Pads de limpieza reciclable
                 </p>
                 <p class="price">
                   $5.95
@@ -75,10 +75,10 @@
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/menu-item-2.png" class="glightbox"><img src="assets/img/menu/menu-item-2.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Aut Luia</h4>
+                <a href="../assets/img/menu/menu-item-2.jpg" class="glightbox"><img src="../assets/img/menu/menu-item-2.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>GuppyFriend</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Filtros para lavarropas
                 </p>
                 <p class="price">
                   $14.95
@@ -86,10 +86,10 @@
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/menu-item-3.png" class="glightbox"><img src="assets/img/menu/menu-item-3.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Est Eligendi</h4>
+                <a href="../assets/img/menu/menu-item-3.jpeg" class="glightbox"><img src="../assets/img/menu/menu-item-3.jpeg" class="menu-img img-fluid" alt=""></a>
+                <h4>PADX</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Utensillos para compostar
                 </p>
                 <p class="price">
                   $8.95
@@ -97,10 +97,10 @@
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/menu-item-4.png" class="glightbox"><img src="assets/img/menu/menu-item-4.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Eos Luibusdam</h4>
+                <a href="../assets/img/menu/menu-item-4.jpeg" class="glightbox"><img src="../assets/img/menu/menu-item-4.jpeg" class="menu-img img-fluid" alt=""></a>
+                <h4>Misfits Market</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Envio de fruta organica
                 </p>
                 <p class="price">
                   $12.95
@@ -108,10 +108,10 @@
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/menu-item-5.png" class="glightbox"><img src="assets/img/menu/menu-item-5.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Eos Luibusdam</h4>
+                <a href="../assets/img/menu/menu-item-5.jpeg" class="glightbox"><img src="../assets/img/menu/menu-item-5.jpeg" class="menu-img img-fluid" alt=""></a>
+                <h4>Bees Wrap</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Envoltorios hechos con tela y cera de abejas
                 </p>
                 <p class="price">
                   $12.95
@@ -119,13 +119,13 @@
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/menu-item-6.png" class="glightbox"><img src="assets/img/menu/menu-item-6.png" class="menu-img img-fluid" alt=""></a>
-                <h4>Laboriosam Direva</h4>
+                <a href="../assets/img/menu/menu-item-6.jpg" class="glightbox"><img src="../assets/img/menu/menu-item-6.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>Gift Card</h4>
                 <p class="ingredients">
-                  Lorem, deren, trataro, filede, nerada
+                  Tarjeta de regalo
                 </p>
                 <p class="price">
-                  $9.95
+                  $300
                 </p>
               </div><!-- Menu Item -->
 
