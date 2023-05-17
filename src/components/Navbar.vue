@@ -1,6 +1,8 @@
 <template>
-  
-  <nav class=" navbar navbar-expand-lg bg-body-tertiary">
+  <header id="header" class="header fixed-top d-flex align-items-center" style="background-color: white;">
+    <div class="container d-flex align-items-center justify-content-between">
+
+    <nav class=" navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <router-link class="navbar-brand" to="/productos">Eco-Products</router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,7 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link class="nav-link active" aria-current="page" to="/HomeUsuario">Home</router-link>
+          <router-link class="nav-link active" aria-current="page" to="/homeUsuario">Home</router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/carrito">Carrito</router-link>
@@ -30,7 +32,9 @@
     </div>
   </div>
 </nav>
- 
+
+</div>
+</header>
 </template>
 
 <script>
