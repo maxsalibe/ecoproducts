@@ -1,6 +1,6 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
-import {router} from './router/index'
+import {Router} from './router/index'
 import Navbar from './components/Navbar.vue'
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -14,12 +14,10 @@ export default {
 </script>
 
 <template>
-<div>
-  
+
+<div> 
 <Navbar />
-
   <h3>Hola desde App.vue</h3>
-
 </div>
 </template>
 
