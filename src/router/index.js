@@ -2,8 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
 import Carrito from '../views/Carrito.vue'
-import Productos from '../views/Productos.vue'
-import CargarUserForm from '../views/CargarUserForm.vue'
+import SignUp from '../views/SignUp.vue'
 import HomeUsuario from '../views/HomeUsuario.vue'
 import HomeAdmin from '../views/HomeAdmin.vue'
 
@@ -29,7 +28,7 @@ const router = createRouter({
     {
       path: '/signup',
       name: 'signup',
-      component: CargarUserForm
+      component: SignUp
     },
     {
       path: '/logout',
@@ -41,12 +40,7 @@ const router = createRouter({
       name: 'carrito',
       component: Carrito
     },
-    {
-      path: '/productos',
-      name: 'productos',
-      component: Productos
-    }
-  
+
   ]
 });
 

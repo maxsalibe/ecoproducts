@@ -249,7 +249,7 @@ section {
   transition: all 0.5s;
   z-index: 997;
   height: 90px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #3b3838;
 }
 
 @media (max-width: 575px) {
