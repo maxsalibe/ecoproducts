@@ -1,5 +1,5 @@
 <template>
-  
+  <p>probando</p>
 </template>
 <!-- 
 es el formulario para la creacion de un nuevo usuario -->
