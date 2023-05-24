@@ -1,18 +1,17 @@
 <template>
-  
-  <nav class=" navbar navbar-expand-lg bg-body-tertiary">
+  <header id="header" class="header fixed-top d-flex align-items-center" style="background-color: white;">
+    <div class="container d-flex align-items-center justify-content-between">
+
+    <nav class=" navbar navbar-expand-lg bg-body-tertiary ml-auto">
   <div class="container-fluid">
-    <router-link class="navbar-brand" to="/">Eco-Products</router-link>
+    <router-link class="navbar-brand" to="/homeUsuario">Eco-Products</router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link class="nav-link active" aria-current="page" to="/">Home</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/carrito">Carrito</router-link>
+          <router-link class="nav-link active" aria-current="page" to="/homeUsuario">Home</router-link>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
@@ -23,27 +22,35 @@
           </a>
           <ul class="dropdown-menu">
             <li><router-link class="dropdown-item" to="/login">Login</router-link></li>
-            <li><router-link class="dropdown-item" to="signup">Sign up</router-link></li>
+            <li><router-link class="dropdown-item" to="/signup">Sign up</router-link></li>
           </ul>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/carrito">Carrito</router-link>
         </li>
       </ul>
     </div>
   </div>
 </nav>
- 
+
+</div>
+</header>
 </template>
 
 <script>
 
 export default {
 
-  components: {
-    Navbar
-  },
 
-}
+   name:'Navbar'
+};
 </script>
 
-<style>
+<style scoped>
+
+.header{
+  border-style: solid;
+    border-bottom-color: black;
+}
 
 </style>
