@@ -13,9 +13,7 @@
         <li class="nav-item">
           <router-link class="nav-link active" aria-current="page" to="/homeUsuario">Home</router-link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
+        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown link
@@ -25,14 +23,14 @@
             <li><router-link class="dropdown-item" to="/signup">Sign up</router-link></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/carrito">Carrito</router-link>
-        </li>
+        
       </ul>
     </div>
   </div>
 </nav>
-
+<div class="nav-item">
+          <router-link class="nav-link bi bi-cart4" to="/carrito"></router-link>
+  </div>
 </div>
 </header>
 </template>
@@ -51,6 +49,10 @@ export default {
 .header{
   border-style: solid;
     border-bottom-color: black;
+}
+.bi-cart4{
+font-size: 2rem;
+display: flex;
 }
 
 </style>

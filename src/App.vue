@@ -21,8 +21,9 @@ export default defineComponent({
   
 <Navbar />
 
-  <h3>Hola desde App.vue</h3>
-
+  <div class="container mt-5">
+</div>
+  <RouterView />
 </div>
  
 
