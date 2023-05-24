@@ -5,13 +5,17 @@ import { RouterLink, RouterView } from 'vue-router';
 import router from './router/index';
 import Navbar from './components/Navbar.vue';
 import 'bootstrap/dist/css/bootstrap.css';
+import CargarProductoForm from './components/CargarProductoForm.vue';
+
+
 
 
 // tira error en el export
 export default defineComponent({
-   name: 'App',
+  name: 'App',
   components: {
-    Navbar
+    Navbar,
+    CargarProductoForm
   }
 });
 </script>
@@ -19,17 +23,14 @@ export default defineComponent({
 <template>
   <div>
     <Navbar />
+    <CargarProductoForm />  <!-- Localizado provisoriamente aqui. -->
 
-<!-- <h3>Hola desde App.vue</h3> -->
-<div class="container mt-5">
+    <!-- <h3>Hola desde App.vue</h3> -->
+    <div class="container mt-5">
 
-  <RouterView />
-</div>
+      <RouterView />
+    </div>
   </div>
-
-    
-  
-
 </template>
 
 <style>
@@ -38,16 +39,19 @@ export default defineComponent({
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999; /* Asegura que el navbar se muestre por encima de otros elementos */
+  z-index: 9999;
+  /* Asegura que el navbar se muestre por encima de otros elementos */
 }
 
 .banner-container {
-  margin-top: 60px; /* Ajusta el valor según el espacio deseado entre el navbar y la imagen */
+  margin-top: 60px;
+  /* Ajusta el valor según el espacio deseado entre el navbar y la imagen */
 }
 
 .content-container {
-  margin-top: 20px; /* Ajusta el valor según el espacio deseado entre el navbar y el contenido */
-  padding-top: 20px; /* Ajusta el valor según el espacio deseado entre el navbar y el contenido */
+  margin-top: 20px;
+  /* Ajusta el valor según el espacio deseado entre el navbar y el contenido */
+  padding-top: 20px;
+  /* Ajusta el valor según el espacio deseado entre el navbar y el contenido */
 }
-
 </style>
