@@ -1,5 +1,5 @@
 <template>
-    
+    <router-link to="/homeAdmin">Volver a la home de Admin</router-link>
     <h1>Carga de nuevos productos</h1>
     <form action="#" method="post" enctype="multipart/form-data">
 
@@ -16,6 +16,8 @@
         <input type="file" id="imagen" name="imagen" accept="image/*" required><br><br>
 
         <input type="submit" value="Cargar Producto">
+
+        <button>Editar</button><button>Eliminar</button>
     </form>
 
 </template>

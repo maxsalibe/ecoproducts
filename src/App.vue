@@ -21,32 +21,15 @@ export default defineComponent({
 </script>
 
 <template>
-<<<<<<< HEAD
   <div>
     <Navbar />
-    <CargarProductoForm />  <!-- Localizado provisoriamente aqui. -->
-
+    
     <!-- <h3>Hola desde App.vue</h3> -->
     <div class="container mt-5">
 
       <RouterView />
     </div>
   </div>
-=======
-<div>
-  
-<Navbar />
-
-  <div class="container mt-5">
-</div>
-  <RouterView />
-</div>
- 
-
-    
-  
-
->>>>>>> 2cb6b7c6a0816d1d437142c20dd4868f91269c31
 </template>
 
 <style>
