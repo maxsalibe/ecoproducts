@@ -31,7 +31,6 @@ export default defineComponent({
       <RouterView />
     </div>
   </div>
-
 </template>
 
 <style>
