@@ -23,7 +23,7 @@ export default defineComponent({
 <template>
   <div>
     <Navbar />
-    <CargarProductoForm />  <!-- Localizado provisoriamente aqui. -->
+   
 
     <!-- <h3>Hola desde App.vue</h3> -->
     <div class="container mt-5">

@@ -1,6 +1,6 @@
 import axios from 'axios'
 const apiClient = axios.create({
-    baseURL: '',  // Completar con el Url de la Api que usemos
+    baseURL: 'https://6477d841362560649a2d004b.mockapi.io/api',  // Completar con el Url de la Api que usemos
     headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json'
@@ -12,7 +12,7 @@ export default {
     
     async listar(){
         try{
-            const response = await apiClient.get('/') // completar
+            const response = await apiClient.get('/producto') // completar
             return response.data
         }catch (error){
             throw "Error de conexion con la API"
@@ -21,7 +21,7 @@ export default {
 
     async crear(producto){
         try{
-            await apiClient.post('/', producto) // completar
+            await apiClient.post('/producto', producto) // completar
         
         }catch(error){
         throw "Error de conexion"
@@ -29,7 +29,7 @@ export default {
     },
     async eliminar(idProducto) {
         try {
-            await apiClient.delete("/" + id) // completar
+            await apiClient.delete("/producto/:id" + id) // completar
         } catch (error) {
             throw "Error de conexion"
         }
@@ -37,7 +37,7 @@ export default {
 
     async actualizar(id, elem) {
         try {
-            await apiClient.put("/" + id, elem) // completar
+            await apiClient.put("/producto/:id" + id, elem) // completar
         } catch (error) {
             throw "Error de conexion"
         }
