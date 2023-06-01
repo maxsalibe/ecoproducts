@@ -10,7 +10,7 @@ import CargarProductoForm from './components/CargarProductoForm.vue';
 
 
 
-// tira error en el export
+
 export default defineComponent({
   name: 'App',
   components: {
@@ -21,7 +21,6 @@ export default defineComponent({
 </script>
 
 <template>
-<<<<<<< HEAD
   <div>
     <Navbar />
     <CargarProductoForm />  <!-- Localizado provisoriamente aqui. -->
@@ -32,21 +31,7 @@ export default defineComponent({
       <RouterView />
     </div>
   </div>
-=======
-<div>
-  
-<Navbar />
 
-  <div class="container mt-5">
-</div>
-  <RouterView />
-</div>
- 
-
-    
-  
-
->>>>>>> 2cb6b7c6a0816d1d437142c20dd4868f91269c31
 </template>
 
 <style>
