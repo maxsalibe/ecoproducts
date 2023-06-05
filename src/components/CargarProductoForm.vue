@@ -1,5 +1,5 @@
 <template>
-    
+    <router-link to="/homeAdmin">Volver a la home de Admin</router-link>
     <h1>Carga de nuevos productos</h1>
     <form action="#" method="post" enctype="multipart/form-data">
 
@@ -15,15 +15,35 @@
         <label for="imagen">Imagen:</label>
         <input type="file" id="imagen" name="imagen" accept="image/*" required><br><br>
 
-        <input type="submit" value="Cargar Producto">
+        <input  @click="cargar()" value="Cargar Producto">
+
+        <button>Editar</button>
+        
+        <button>Eliminar</button>
     </form>
 
 </template>
 <script>
 import { defineComponent } from 'vue';
+import ProductService from '../Service/ProductService'
 
 export default defineComponent({
-   name:'CargarProductoForm'
+   name:'CargarProductoForm',
+
+methods: {
+   cargar(){
+
+    const producto = {
+        nombre: this.nombre,
+        descripcion: this.descripcion,
+        precio: this.precio,
+        imagen: this.imagen
+      };
+
+        producto.preventDefault(); 
+        ProductService.crear(producto);
+   }
+}
 });
 </script>
 

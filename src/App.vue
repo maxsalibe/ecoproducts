@@ -2,7 +2,7 @@
 //import { createApp } from 'vue';
 import { defineComponent } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
-import router from './router/index';
+import Router from './router/index';
 import Navbar from './components/Navbar.vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import CargarProductoForm from './components/CargarProductoForm.vue';
@@ -10,7 +10,7 @@ import CargarProductoForm from './components/CargarProductoForm.vue';
 
 
 
-// tira error en el export
+
 export default defineComponent({
   name: 'App',
   components: {
@@ -23,7 +23,7 @@ export default defineComponent({
 <template>
   <div>
     <Navbar />
-    <CargarProductoForm />  <!-- Localizado provisoriamente aqui. -->
+   
 
     <!-- <h3>Hola desde App.vue</h3> -->
     <div class="container mt-5">

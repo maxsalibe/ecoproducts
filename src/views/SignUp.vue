@@ -1,6 +1,9 @@
 <template>
   
   <form>
+     <div class="form-titulo-div-signup">
+      <label for="Titulo" class="form-titulo-lab">Sign Up</label>
+    </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -12,7 +15,7 @@
   </div>
   
   
-  <button type="submit" class="btn btn-primary">Enviar</button>
+  <button type="submit" class="btn btn-primary">Ingresar</button>
 </form>
 </template>
 
@@ -23,5 +26,7 @@ export default {
 </script>
 
 <style>
-
+.form-titulo-div-signup{
+  font-size: 2.5rem;
+}
 </style>

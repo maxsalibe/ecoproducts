@@ -27,28 +27,8 @@
 
         <ul class="nav nav-tabs d-flex justify-content-center">
 
-          <li class="nav-item">
-            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
-              <h4>Descuentos</h4>
-            </a>
-          </li>
 
-          <!-- <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-breakfast">
-              <h4>Breakfast</h4>
-            </a>
-        </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-lunch">
-              <h4>Lunch</h4>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-dinner">
-              <h4>Dinner</h4>
-            </a>
-          </li> -->
+         
 
         </ul>
 
@@ -56,80 +36,23 @@
 
           <div class="tab-pane fade active show" id="menu-starters">
 
-            <!-- <div class="tab-header text-center">
-              <p>Menu</p>
-              <h3>Starters</h3>
-            </div> -->
+            <ul style="display: flex;">
 
-            <div class="row">
+              <li v-for="producto in productos" :key="producto.id">
+                 <div class="row">
+                 <div class="col-lg-4">
+                 <img :src="producto.imagen" class="menu-img img-fluid" alt="">
+                  <h4>Nombre</h4>
+                  <h3>{{producto.nombre}}</h3>
+                   <h4>Descripcion</h4>
+                  <p>{{producto.descripcion}}</p>
+                   <h4>Precio</h4>
+                  <p>{{producto.precio}}</p>
+                 </div>
+                  </div>
+              </li>
 
-              <div class="col-lg-4">
-                <a href="../assets/img/menu/menu-item-1.jpeg" class="glightbox"><img src="../assets/img/menu/menu-item-1.jpeg" class="menu-img img-fluid" alt=""></a>
-                <h4>Bamboo Cotton</h4>
-                <p class="ingredients">
-                  Pads de limpieza reciclable
-                </p>
-                <p class="price">
-                  $5.95
-                </p>
-              </div><!-- Menu Item -->
-
-              <div class="col-lg-4 menu-item">
-                <a href="../assets/img/menu/menu-item-2.jpg" class="glightbox"><img src="../assets/img/menu/menu-item-2.jpg" class="menu-img img-fluid" alt=""></a>
-                <h4>GuppyFriend</h4>
-                <p class="ingredients">
-                  Filtros para lavarropas
-                </p>
-                <p class="price">
-                  $14.95
-                </p>
-              </div><!-- Menu Item -->
-
-              <div class="col-lg-4 menu-item">
-                <a href="../assets/img/menu/menu-item-3.jpeg" class="glightbox"><img src="../assets/img/menu/menu-item-3.jpeg" class="menu-img img-fluid" alt=""></a>
-                <h4>PADX</h4>
-                <p class="ingredients">
-                  Utensillos para compostar
-                </p>
-                <p class="price">
-                  $8.95
-                </p>
-              </div><!-- Menu Item -->
-
-              <div class="col-lg-4 menu-item">
-                <a href="../assets/img/menu/menu-item-4.jpeg" class="glightbox"><img src="../assets/img/menu/menu-item-4.jpeg" class="menu-img img-fluid" alt=""></a>
-                <h4>Misfits Market</h4>
-                <p class="ingredients">
-                  Envio de fruta organica
-                </p>
-                <p class="price">
-                  $12.95
-                </p>
-              </div><!-- Menu Item -->
-
-              <div class="col-lg-4 menu-item">
-                <a href="../assets/img/menu/menu-item-5.jpeg" class="glightbox"><img src="../assets/img/menu/menu-item-5.jpeg" class="menu-img img-fluid" alt=""></a>
-                <h4>Bees Wrap</h4>
-                <p class="ingredients">
-                  Envoltorios hechos con tela y cera de abejas
-                </p>
-                <p class="price">
-                  $12.95
-                </p>
-              </div><!-- Menu Item -->
-
-              <div class="col-lg-4 menu-item">
-                <a href="../assets/img/menu/menu-item-6.jpg" class="glightbox"><img src="../assets/img/menu/menu-item-6.jpg" class="menu-img img-fluid" alt=""></a>
-                <h4>Gift Card</h4>
-                <p class="ingredients">
-                  Tarjeta de regalo
-                </p>
-                <p class="price">
-                  $300
-                </p>
-              </div><!-- Menu Item -->
-
-            </div>
+            </ul>
           </div><!-- End Starter Menu Content -->
 
 
@@ -141,12 +64,32 @@
 </template>
 
 <script>
+import ProductService from '../Service/ProductService'
+
 export default {
  name:'HomeUsuario',
+
+  async mounted(){
+    this.productos = await ProductService.listar();
+    
+  },
+
+  data(){
+    return{
+      productos:[],
+    };
+  }
+
 }
 
 </script>
  
 <style>
 
+ul li{
+
+min-width: 200px;
+list-style: none;
+
+}
 </style>
