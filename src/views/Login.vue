@@ -5,23 +5,55 @@
       <label for="Titulo" class="form-titulo-lab">Login</label>
     </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="username" class="form-label">Correo electrónico</label>
+  
+    <input type="email" class="form-control" v-model="usuario.email" aria-describedby="emailHelp" required>
     <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label for="password" class="form-label">Contraseña</label>
+    <input type="password" class="form-control" v-model="usuario.passw" required>
   </div>
  
-  <button type="submit" class="btn btn-primary">Ingresar</button>
+  <button @click="logear" class="btn btn-primary">Ingresar</button>
 </form>
 </template>
 
 <script>
-export default {
+import { useLoginStore } from "../stores/login";
 
-}
+export default {
+  setup() {
+    const { login } = useLoginStore(); 
+    return { login };
+  },
+  data() {
+    return {
+      usuario: { email: "", passw: "" },
+    };
+  },
+  methods: {
+    logear() {
+      // consultar api  (proxima clase)
+      // hardcodeo
+      if (
+        this.usuario.email == "usuario@test.com" &&
+        this.usuario.passw == "123456"
+      ) {
+        this.login({email:this.usuario.email, permissions:[]})
+        this.$router.push("/homeUsuario");
+      } else if ( 
+        this.usuario.email == "admin@test.com" &&
+        this.usuario.passw == "123456"
+      ) {
+        this.login({email:this.usuario.email, permissions:['homeAdmin']})
+        this.$router.push("/");
+      } else {
+        alert("Credenciales erroneas");
+      }
+    },
+  },
+};
 </script>
 
 <style>
