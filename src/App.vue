@@ -10,7 +10,7 @@ import CargarProductoForm from './components/CargarProductoForm.vue';
 
 
 
-// tira error en el export
+
 export default defineComponent({
   name: 'App',
   components: {
