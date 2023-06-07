@@ -1,5 +1,7 @@
 <template>
+  
   <div class="container">
+    
     <h1>Carrito de compras</h1>
     <div class="row">
       <div class="col-md-8">
@@ -67,6 +69,6 @@ export default defineComponent({
     total() {
       return this.cart.reduce((acc, item) => acc + item.price, 0);
     },
-  },*/
+  }*/
 });
 </script>
