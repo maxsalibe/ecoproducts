@@ -18,7 +18,16 @@
 
 <script>
 export default {
-
+    beforeRouteEnter(to, from, next) {
+    
+    const session = JSON.parse(sessionStorage.getItem('userInfo'));
+    if (session.tipoUsuario !== 'Admin') {
+      // Redirigir al home de usuario normal
+      next('/homeUsuario');
+    } else {
+      next();
+    }
+  },
 }
 </script>
 

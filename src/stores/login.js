@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 export const useLoginStore = defineStore('login', {
     state: () => {
-        return { isLogin: false, user: { email: '', permissions: [] } }
+        return { isLogin: false, usuario: { email: '', permissions: [], tipoUsuario:'' }}
     },
     getters: {
 
@@ -9,14 +9,21 @@ export const useLoginStore = defineStore('login', {
     actions: {
         logout() {
             this.isLogin = false
-            this.user = { email: '', permissions: [] }
+            this.usuario = { email: '', permissions: [] }
         },
-        login(user) {
+
+        login(usuario) {
+            
             this.isLogin = true
-            this.user = user
+            this.usuario = usuario
+            this.tipoUsuario = usuario.tipoUsuario
+            sessionStorage.setItem('userInfo', JSON.stringify(usuario));
+            // sessionStorage.setItem('tipoUsuario', this.tipoUsuario);
+            // sessionStorage.setItem('nombreUsuario', this.user.split("@").shift())
+
         },
         havePermissions(access) {
-            return this.user.permissions.filter(p => p == access).length > 0 ?  true: false
+            return this.usuario.permissions.filter(p => p == access).length > 0 ?  true: false
         }
     },
 })
