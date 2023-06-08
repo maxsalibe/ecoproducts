@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from 'vue-router';
 import Router from './router/index';
 import Navbar from './components/Navbar.vue';
 import 'bootstrap/dist/css/bootstrap.css';
-import CargarProductoForm from './components/CargarProductoForm.vue';
+import CargarProductoForm from './components/CargarProducto.vue';
 
 
 
@@ -22,15 +22,14 @@ export default defineComponent({
 
 <template>
   <div>
-    <Navbar />
-   
+  
+<Navbar />
 
-    <!-- <h3>Hola desde App.vue</h3> -->
-    <div class="container mt-5">
-
-      <RouterView />
-    </div>
-  </div>
+  <div class="container mt-5">
+</div>
+  <RouterView />
+</div>
+ 
 </template>
 
 <style>

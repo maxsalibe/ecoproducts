@@ -6,7 +6,7 @@
       <div v-else>
         <ul>
           <li v-for="producto in productos" :key="producto.nombre">
-            {{ producto.nombre }} - {{ producto.precio }}
+            {{ producto.nombre }} - Precio: {{ producto.precio }}
             <button @click="agregarProducto(producto)">Agregar</button>
           </li>
         </ul>
@@ -44,7 +44,8 @@
         this.carrito = []
       },
       realizarCompra() {
-        alert("¡Compra realizada! Gracias por su compra.");
+        alert("Compra realizada. Gracias por su compra.");
+        alert("Vuelva prontos...");
         this.vaciarCarrito();
       }
     }

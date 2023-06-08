@@ -11,7 +11,7 @@ export default {
     
     async listar(){
         try{
-            const response = await apiClient.get('/producto') // completar
+            const response = await apiClient.get('/producto') 
             return response.data
         }catch (error){
             throw "Error de conexion con la API"
@@ -20,7 +20,7 @@ export default {
 
     async crear(producto){
         try{
-            await apiClient.post('/producto', producto) // completar
+            await apiClient.post('/producto', producto) 
         
         }catch(error){
         throw "Error de conexion"
@@ -28,7 +28,7 @@ export default {
     },
     async eliminar(idProducto) {
         try {
-            await apiClient.delete("/producto/:id" + id) // completar
+            await apiClient.delete("/producto/:id" + id) 
         } catch (error) {
             throw "Error de conexion"
         }
@@ -36,7 +36,7 @@ export default {
 
     async actualizar(id, elem) {
         try {
-            await apiClient.put("/producto/:id" + id, elem) // completar
+            await apiClient.put("/producto/:id" + id, elem) 
         } catch (error) {
             throw "Error de conexion"
         }
