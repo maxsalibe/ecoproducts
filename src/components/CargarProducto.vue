@@ -1,25 +1,25 @@
 <template>
-    <router-link to="/homeAdmin">Volver a la home de Admin</router-link>
+    <router-link to="/homeAdmin">Volver</router-link>
+    
     <h1>Carga de nuevos productos</h1>
-    <form action="#" method="post" enctype="multipart/form-data">
+
+    <form @submit.prevent="cargar" action="#" method="post" enctype="multipart/form-data">
 
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+        <input v-model= "producto.nombre" type="text" id="nombre" name="nombre" required><br><br>
 
         <label for="descripcion">Descripción:</label>
-        <input type="text" id="descripcion" name="descripcion" required><br><br>
+        <input v-model= "producto.descripcion" type="text" id="descripcion" name="descripcion" required><br><br>
 
         <label for="precio">Precio:</label>
-        <input type="number" id="precio" name="precio" step="0.01" required><br><br>
+        <input v-model= "producto.precio" type="number" id="precio" name="precio" step="0.01" required><br><br>
 
         <label for="imagen">Imagen:</label>
-        <input type="file" id="imagen" name="imagen" accept="image/*" required><br><br>
+        <input v-model= "producto.imagen" type="text" id="imagen" name="imagen" accept="image/*" required><br><br>
 
         <input @click="cargar()" value="Cargar Producto">
 
-        <button>Editar</button>
-
-        <button>Eliminar</button>
+    
     </form>
 </template>
 <script>
@@ -28,6 +28,12 @@ import ProductService from '../Service/ProductService'
 
 export default defineComponent({
     name: 'CargarProductoForm',
+
+    data(){
+        return {
+            producto: {},
+        }
+    },
 
     methods: {
         cargar() {

@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from 'vue-router';
 import Router from './router/index';
 import Navbar from './components/Navbar.vue';
 import 'bootstrap/dist/css/bootstrap.css';
-import CargarProductoForm from './components/CargarProductoForm.vue';
+import CargarProductoForm from './components/CargarProducto.vue';
 
 
 
