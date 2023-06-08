@@ -8,7 +8,6 @@ const apiClient = axios.create({
 })
 
 export default {
-
     
     async listar(){
         try{
@@ -41,10 +40,6 @@ export default {
         } catch (error) {
             throw "Error de conexion"
         }
-    },
-
-
-
-    
+    },   
 
 }

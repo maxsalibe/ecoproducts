@@ -25,10 +25,7 @@
           <p>Mira nuestros <span>Eco-Productos</span></p>
         </div>
 
-        <ul class="nav nav-tabs d-flex justify-content-center">
-
-
-         
+        <ul class="nav nav-tabs d-flex justify-content-center">         
 
         </ul>
 
