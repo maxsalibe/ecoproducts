@@ -5,7 +5,7 @@ import Carrito from '../views/Carrito.vue'
 import SignUp from '../views/SignUp.vue'
 import HomeUsuario from '../views/HomeUsuario.vue'
 import HomeAdmin from '../views/HomeAdmin.vue'
-
+//probando mica
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
