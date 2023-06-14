@@ -1,15 +1,11 @@
-//import ModelMem from '../model/DAO/productosMem.js'
-//import ModelFile from '../model/DAO/productosFile.js'
-import ModelFactory from "../model/DAO/productosFactory.js"
-
 import config from '../config.js'
+import ModelMongoDB from "../model/DAO/productosMongoDB.js"
+import {validar} from "../validaciones/productos.js"
 
 class Servicio {
 
     constructor() {
-        //this.model = new ModelMem()
-        //this.model = new ModelFile()
-        this.model = ModelFactory.get(config.MODO_PERSISTENCIA)
+        this.model = new ModelMongoDB()
     }
 
     obtenerProductos = async id => {
@@ -18,8 +14,13 @@ class Servicio {
     }
 
     guardarProducto = async producto => {
-        const productoGuardado = await this.model.guardarProducto(producto)
-        return productoGuardado
+        const res = validar(producto)
+        if(res.result) {
+            const productoGuardado = await this.model.guardarProducto(producto)
+            return productoGuardado
+        } else {
+            throw res.error
+        }
     }
 
     actualizarProducto = async (id, producto) => {

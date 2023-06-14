@@ -14,9 +14,13 @@ class Controlador {
     }
 
     guardarProducto = async (req, res) => {
-        const producto = req.body
-        const productoGuardado = await this.servicio.guardarProducto(producto)
-        res.json(productoGuardado)
+        try {
+            const producto = req.body
+            const productoGuardado = await this.servicio.guardarProducto(producto)
+            res.json(productoGuardado)
+        } catch(error) {
+            res.json({error: error.message})
+        }
     }
 
     actualizarProducto = async (req, res) => {
