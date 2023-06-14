@@ -7,3 +7,5 @@ class Controlador {
         this.servicio = new Servicio()
     }
 }  
+
+export default Controlador

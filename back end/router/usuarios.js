@@ -7,6 +7,7 @@ class Router {
         this.router = express.Router()
         this.controlador = new Controlador()
     }
+    
 }
 
 export default Router
