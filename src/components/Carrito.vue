@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       productos: [
-        { nombre: "Jabón verde", descripcion: "No contamina", precio: 10 },
+        { nombre: "Jabón verde", descripcion: "No contamina nada", precio: 10 },
         { nombre: "Shampoo suave", descripcion: "Para todo tipo de cabello", precio: 15 },
         { nombre: "Crema hidratante", descripcion: "Fórmula enriquecida con vitaminas", precio: 20 }
       ],
