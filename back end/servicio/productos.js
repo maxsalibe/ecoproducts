@@ -1,6 +1,6 @@
 import config from '../config.js'
 import ModelMongoDB from "../model/DAO/productosMongoDB.js"
-//import {validar} from "../validaciones/productos.js"
+import {validar, validarBorrado} from "../validaciones/productos.js"
 
 class Servicio {
 
@@ -14,7 +14,7 @@ class Servicio {
     }
 
      guardarProducto = async producto => {
-        //const res = validar(producto)
+        const res = validar(producto)
         if(res.result) {
             const productoGuardado = await this.model.guardarProducto(producto)
             return productoGuardado
@@ -29,6 +29,7 @@ class Servicio {
     }
 
     borrarProducto = async id => {
+        const res = validarBorrado(producto)
         const productoBorrado = await this.model.borrarProducto(id)
         return productoBorrado
     }

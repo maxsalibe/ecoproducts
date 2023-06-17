@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }))
 //          API REST Ful : Productos
 // ------------------------------------------
 app.use('/api/productos', new RouterProductos().start())
-//app.use('/api/usuarios', new RouterUsuarios().start())
+app.use('/api/usuarios', new RouterUsuarios().start())
 //app.use('/api/carrito', new RouterCarrito().start())
 
 //-------------------------------------------
