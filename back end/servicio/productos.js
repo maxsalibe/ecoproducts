@@ -15,12 +15,14 @@ class Servicio {
 
      guardarProducto = async producto => {
         //const res = validar(producto)
-        if(res.result) {
+       /*  if(res.result) {
             const productoGuardado = await this.model.guardarProducto(producto)
-            return productoGuardado
+            return productoGuardado  
         } else {
-            throw res.error
-        }
+          throw res.error
+        }*/
+        const productoGuardado = await this.model.guardarProducto(producto)
+        return productoGuardado
     } 
 
     actualizarProducto = async (id, producto) => {

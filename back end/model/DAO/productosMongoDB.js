@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb"
 import CnxMongoDB from "../DBMongo.js"
 
 class ModelMongoDB {
@@ -8,7 +9,8 @@ class ModelMongoDB {
     obtenerProductos = async id => {
         if(!CnxMongoDB.connectOk) return id? {} : []
         if(id) {
-            const producto =  await Promise.resolve({})
+            //const producto =  await Promise.resolve({})
+            const producto = await CnxMongoDB.db.collection('productos').findOne({_id: new ObjectId(id)})
             return producto || {}
         }
         else {
@@ -20,7 +22,7 @@ class ModelMongoDB {
 
     guardarProducto = async producto => {
         if(!CnxMongoDB.connectOk) return {}
-
+        await CnxMongoDB.db.collection('productos').insertOne(producto)
         return await Promise.resolve(producto)
     }
 
@@ -32,8 +34,9 @@ class ModelMongoDB {
 
     borrarProducto = async id => {
         if(!CnxMongoDB.connectOk) return {}
-
-        return await Promise.resolve({})
+        const productoEliminado = await this.obtenerProductos(id)
+        await CnxMongoDB.db.collection('productos').deleteOne({_id: new ObjectId(id)})
+        return await productoEliminado
     }
 }
 

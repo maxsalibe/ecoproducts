@@ -34,7 +34,7 @@ class Controlador {
     }
 
     borrarProducto = async (req, res) => {
-        const id = Number(req.params.id)
+        const id = req.params.id
         const productoBorrado = await this.servicio.borrarProducto(id)
         res.json(productoBorrado)
     }

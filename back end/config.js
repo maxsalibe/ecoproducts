@@ -1,8 +1,11 @@
-const PORT = 8080
-const MODO_PERSISTENCIA = 'MONGODB'   
-//const STRCNX = 'mongodb://127.0.0.1'
-const STRCNX = 'mongodb+srv://mica:tp2sanchez@cluster0.h9xwixn.mongodb.net/?retryWrites=true&w=majority'
-const BASE = 'EcoCommerce'
+import dotenv from 'dotenv'
+
+dotenv.config()
+
+const PORT = process.env.PORT || 8080
+const MODO_PERSISTENCIA = process.env.MODO_PERSISTENCIA || 'MEM'   
+const STRCNX = process.env.STRCNX || 'mongodb://127.0.0.1'
+const BASE = process.env.BASE || 'test'
 
 export default {
     PORT,   
